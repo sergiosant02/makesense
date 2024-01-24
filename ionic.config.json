@@ -1,0 +1,7 @@
+{
+  "name": "makesense",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
