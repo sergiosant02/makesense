@@ -8,9 +8,26 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'makesense/user-tab',
     pathMatch: 'full'
   },
+  {
+    path: 'user-tab',
+    loadChildren: () => import('./pages/user-tab/user-tab.module').then( m => m.UserTabPageModule)
+  },
+  {
+    path: 'group-tab',
+    loadChildren: () => import('./pages/group-tab/group-tab.module').then( m => m.GroupTabPageModule)
+  },
+  {
+    path: 'makesense',
+    loadChildren: () => import('./pages/initial-tab/initial-tab.module').then( m => m.InitialTabPageModule)
+  },
+  {
+    path: 'job-tab',
+    loadChildren: () => import('./pages/job-tab/job-tab.module').then( m => m.JobTabPageModule)
+  },
+  
 ];
 
 @NgModule({

@@ -1,0 +1,26 @@
+<ion-header [translucent]="true" class="appbar">
+  <ion-toolbar>
+    <ion-title>Grupos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+@for (group of groups; track $index) {
+
+  <ion-content [fullscreen]="true">
+    <ion-card [button]="true" (click)="onClick()">
+      <ion-card-header>
+        <ion-card-title>{{group.name}}</ion-card-title>
+        <ion-card-subtitle>Código: {{group.code}}</ion-card-subtitle>
+      </ion-card-header>
+    
+      <ion-card-content>
+        {{group.description}}
+      </ion-card-content>
+
+    </ion-card>
+  </ion-content>  
+
+} @empty {
+  <ion-title>No hay grupos</ion-title>
+}
+
